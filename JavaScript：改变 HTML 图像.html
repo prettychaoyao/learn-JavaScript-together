@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-Type" content="text/html;charset=utf-8"/>
+</head>
+<body>
+<img id="myimage" onclick="changeImage()" src="/Users/Jobs/Downloads/eg_bulboff.gif">
+
+<p>点击灯泡来点亮或熄灭这盏灯</p>
+
+<script>
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("bulbon"))
+  {
+  element.src="/Users/Jobs/Downloads/eg_bulboff.gif";
+  }
+else
+  {
+  element.src="/Users/Jobs/Downloads/eg_bulbon.gif";
+  }
+}
+</script>
+
+</body>
+</html>
