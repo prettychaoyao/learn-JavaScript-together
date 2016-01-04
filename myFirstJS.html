@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-Type" content="text/html;charset=utf-8"/>
+<script>
+function numberFunction()
+{
+var x=document.getElementById("number").value;
+if(x==""||isNaN(x))
+	{
+	alert("请输入数字");
+	}
+}
+</script>
+<script>
+function removeFunction()
+{
+document.write("糟糕！文档消失了。");
+}
+</script>
+</head>
+
+<body>
+
+<p>
+JavaScript 能够直接写入 HTML 输出流中：
+</p>
+
+<script>
+document.write("<h1>This is a heading</h1>");
+document.write("<p>This is a paragraph.</p>");
+</script>
+
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+
+<button onclick="removeFunction()">点击这里,覆盖</button>
+
+
+
+<h1>My first JavaScript</h1>
+
+<p>
+JavaScript 能够对事件作出反应。比如对按钮的点击：
+</p>
+
+<button type="button" onclick="alert('Welcome to JavaScript-world!')">点击这里 - 弹框</button>
+
+<p>
+******我是华丽的分割线******
+</p>
+
+<p id="changeContent">
+JavaScript 能改变 HTML 元素的内容。
+</p>
+
+<button type="button" onclick="myFunction()">点击这里 - 改变内容</button>
+
+<p>
+******我是华丽的分割线******
+</p>
+
+<img id="myimage" onclick="changeImage()" src="/Users/Jobs/Downloads/eg_bulboff.gif">
+
+<p>点击灯泡来点亮或熄灭这盏灯</p>
+
+
+<p>
+******我是华丽的分割线******
+</p>
+
+
+<p id="changeColor">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+
+<button type="button" onclick="changeColorFunction()">点击这里 - changeColor</button>
+
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input id="number" type="text">
+
+<button type="button" onclick="numberFunction()">点击这里 - 数字校验</button>
+
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="waibuFunction()">点击这里</button>
+
+<p><b>注释：</b>waibuFunction 保存在名为 "myScript.js" 的外部文件中。</p>
+
+<script type="text/javascript" src="/Users/Jobs/Documents/My js/myScript.js"></script>
+
+
+
+<script>
+function changeImage()
+{
+element=document.getElementById('myimage')
+if (element.src.match("bulbon"))
+  {
+  element.src="/Users/Jobs/Downloads/eg_bulboff.gif";
+  }
+else
+  {
+  element.src="/Users/Jobs/Downloads/eg_bulbon.gif";
+  }
+}
+</script>
+
+<script>
+function changeColorFunction()
+{
+x=document.getElementById("changeColor") // 找到元素
+x.style.color="#ff0000";          // 改变样式
+}
+</script>
+
+<script>
+function myFunction()
+{
+x = document.getElementById("changeContent");  // 找到元素
+x.innerHTML="Hello JavaScript!";    // 改变内容
+}
+</script>
+
+<script>
+var x=2;
+var y=3;
+var z=2+3;
+document.write(x + "<br>");
+document.write(y + "<br>");
+document.write(z + "<br>");
+</script>
+
+<script>
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+document.write(person.firstname + " is " + person.age + " years old.");
+</script>
+
+</body>
+</html>
